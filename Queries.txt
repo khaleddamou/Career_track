@@ -1,0 +1,26 @@
+SELECT 
+    MAX(days_for_completion) AS longest_completion_period
+FROM 
+    career_track
+WHERE 
+    track_completed = 1;
+---------------------------------
+
+SELECT 
+    track_name
+FROM 
+    career_track
+WHERE 
+    track_completed = 1
+ORDER BY 
+    days_for_completion DESC
+LIMIT 1;
+
+--------------------------------------
+SELECT 
+    COUNT(*) AS total_completions
+FROM 
+    career_track
+WHERE 
+    track_completed = 1;
+
